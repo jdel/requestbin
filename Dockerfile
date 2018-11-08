@@ -18,4 +18,4 @@ RUN apk add --update python gcc python-dev py-pip \
 
 EXPOSE 8000
 
-CMD gunicorn -b 0.0.0.0:8000 --worker-class gevent --workers 2 --max-requests 1000 requestbin:app
+CMD gunicorn -b 0.0.0.0:8000 --worker-class gevent --workers 1 --max-requests 1000 requestbin:app
